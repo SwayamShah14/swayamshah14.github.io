@@ -59,6 +59,24 @@
     }
     #header .tagline { color: var(--muted); margin-bottom: 0.8rem; }
     #header .links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    /* ---- entries ---- */
+    .entry { margin-bottom: 1.4rem; }
+    .entry-header {
+      display: flex; justify-content: space-between;
+      align-items: baseline; flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 0.15rem;
+    }
+    .entry-header .left strong { font-weight: bold; }
+    .entry-header .left em { color: var(--muted); font-style: normal; }
+    .entry-header .right { font-size: 13px; color: var(--muted); text-align: right; }
+    ul { padding-left: 1.2em; }
+    ul li { margin-bottom: 0.2rem; color: var(--text); }
+    .badge {
+      display: inline-block; font-size: 11px;
+      border: 1px solid var(--accent); color: var(--accent);
+      padding: 0 0.4em; border-radius: 2px; margin-left: 0.4em;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -78,6 +96,53 @@
         <a href="https://github.com/swayamshah" target="_blank" rel="noopener">GitHub</a>
       </div>
     </section>
+
+    <section id="experience">
+  <h2>EXPERIENCE</h2>
+
+  <div class="entry">
+    <div class="entry-header">
+      <div class="left"><strong>Goldman Sachs Asset Management</strong> <span class="badge">return offer</span><br><em>Quant Strats Intern</em></div>
+      <div class="right">Jun – Aug 2025<br>London, UK</div>
+    </div>
+    <ul>
+      <li>Developed quantitative investment frameworks using ML to benchmark PE portfolio companies against industry peers, transforming fragmented public datasets into actionable investment insights.</li>
+      <li>Applied NLP and ReAct agents to extract predictive signals from unstructured historical deal data, creating a novel due diligence framework.</li>
+      <li>Built an AI-powered CIM screening tool at an internal hackathon using LLM-based document parsing, reducing initial screening time by 85%.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <div class="left"><strong>Palantir</strong><br><em>Spring Intern</em></div>
+      <div class="right">Apr 2025<br>London, UK</div>
+    </div>
+    <ul>
+      <li>Selected for competitive Spring Week; designed and delivered an end-to-end data processing and recommendation application for a UK NHS use case using Palantir Foundry and AIP.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <div class="left"><strong>iView Labs</strong><br><em>Software Engineering Intern</em></div>
+      <div class="right">Aug – Sep 2024<br>Ahmedabad, India</div>
+    </div>
+    <ul>
+      <li>Developed a bespoke ML document-classification solution (93% accuracy) using SpaCy, PyTorch/FastAI, and HuggingFace.</li>
+      <li>Engineered and deployed a scalable, containerised version with Docker, meeting all performance specifications.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <div class="left"><strong>Dhirubhai Ambani University</strong><br><em>Research Intern</em></div>
+      <div class="right">Jul – Aug 2024<br>Gandhinagar, India</div>
+    </div>
+    <ul>
+      <li>Built a RAG query-response tool for the Indian legal system using ChromaDB and the OpenAI API, achieving 88% accuracy vs ChatGPT's 75%.</li>
+    </ul>
+  </div>
+</section>
   </main>
 <script>
   const btn = document.getElementById('toggle');
