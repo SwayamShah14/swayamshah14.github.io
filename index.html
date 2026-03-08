@@ -38,8 +38,28 @@
   </style>
 </head>
 <body>
+<button id="toggle" aria-label="Toggle dark mode" style="
+  position: fixed; top: 1rem; right: 1.5rem;
+  background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 13px;
+  color: var(--muted); padding: 0;
+">[dark]</button>
   <main>
     <!-- content goes here -->
   </main>
+<script>
+  const btn = document.getElementById('toggle');
+  const stored = localStorage.getItem('theme');
+  if (stored) {
+    document.documentElement.dataset.theme = stored;
+    btn.textContent = stored === 'dark' ? '[light]' : '[dark]';
+  }
+  btn.addEventListener('click', () => {
+    const isDark = document.documentElement.dataset.theme === 'dark';
+    document.documentElement.dataset.theme = isDark ? '' : 'dark';
+    localStorage.setItem('theme', isDark ? '' : 'dark');
+    btn.textContent = isDark ? '[dark]' : '[light]';
+  });
+</script>
 </body>
 </html>
