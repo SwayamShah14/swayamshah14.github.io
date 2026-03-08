@@ -35,6 +35,30 @@
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    /* ---- shared ---- */
+    section { margin-bottom: 2.5rem; }
+    h2 {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      border-top: 1px solid var(--rule);
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    /* ---- header ---- */
+    #header h1 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.2rem;
+    }
+    #header .tagline { color: var(--muted); margin-bottom: 0.8rem; }
+    #header .links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
   </style>
 </head>
 <body>
@@ -45,7 +69,15 @@
   color: var(--muted); padding: 0;
 ">[dark]</button>
   <main>
-    <!-- content goes here -->
+    <section id="header">
+      <h1>Swayam Shah</h1>
+      <p class="tagline">Mathematics &amp; Computer Science &nbsp;·&nbsp; Imperial College London &nbsp;·&nbsp; BEng graduating June 2026</p>
+      <div class="links">
+        <a href="mailto:swayam.shah23@imperial.ac.uk">swayam.shah23@imperial.ac.uk</a>
+        <a href="https://linkedin.com/in/swayam-shah-icl" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/swayamshah" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
   </main>
 <script>
   const btn = document.getElementById('toggle');
